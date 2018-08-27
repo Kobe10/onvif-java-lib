@@ -13,6 +13,7 @@ import org.me.javawsdiscovery.DeviceDiscovery;
  */
 public class OnvifDiscovery {
 	public static List<OnvifPointer> discoverOnvifDevices() {
+		int i = 0;
 		final ArrayList<OnvifPointer> onvifPointers = new ArrayList<>();
 		final Collection<URL> urls = DeviceDiscovery.discoverWsDevicesAsUrls("^http$", ".*onvif.*");
 		for (URL url : urls) {
